@@ -11,10 +11,10 @@ class UserCreateForm(forms.ModelForm):
             "name":forms.TextInput(attrs={"class":"form-control"}),
             "email":forms.EmailInput(attrs={"class":"form-control"}),
             "phone":forms.TextInput(attrs={"class":"form-control"}),
-            "qualification":forms.Textarea(attrs={"class":"form-control","rows":3}),
-            "job":forms.Select(attrs={"class":"form-select"}),
-            "address":forms.Select(attrs={"class":"form-select"}),
-            "age":forms.Select(attrs={"class":"form-select"}),
+            "qualification":forms.TextInput(attrs={"class":"form-control"}),
+            "job":forms.TextInput(attrs={"class":"form-control"}),
+            "address":forms.Textarea(attrs={"class":"form-control","rows":3}),
+            "age":forms.TextInput(attrs={"class":"form-control"}),
             "gender":forms.Select(attrs={"class":"form-select"})}
 
 

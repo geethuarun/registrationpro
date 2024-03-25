@@ -12,10 +12,10 @@ class UserCreateView(CreateView):
     template_name="register.html"
     form_class=UserCreateForm
     model=Users
-    success_url=reverse_lazy("")
+    success_url=reverse_lazy("userlist")
 
 class UserListView(ListView):
-    template_name="userlist.html"
+    template_name="list.html"
     context_object_name="users"
     model=Users
     def get_queryset(self):
