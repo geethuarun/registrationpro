@@ -24,21 +24,21 @@ class UserListView(ListView):
     
 
 class UserDetailView(DetailView):
-    template_name="userdetail.html"
+    template_name="detail.html"
     context_object_name="user"
     model=Users
 
 
 class UserUpdateView(UpdateView):
-    template_name="userupdate.html"
+    template_name="edit.html"
     form_class=UserCreateForm
     model=Users
-    success_url=reverse_lazy("listuser")
+    success_url=reverse_lazy("userlist")
 
 def remove_user(request,*args,**kwargs):
     id=kwargs.get("pk")
     Users.objects.filter(id=id).delete()
-    return redirect("listuser")
+    return redirect("userlist")
 
 
     
